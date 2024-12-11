@@ -13,6 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>prepquest</name>
     <description>Project for Prep Quest</description>
+    <packaging>war</packaging>
     <url/>
     <licenses>
         <license/>
@@ -71,6 +72,12 @@
             <groupId>com.microsoft.sqlserver</groupId>
             <artifactId>mssql-jdbc</artifactId>
             <version>10.2.0.jre8</version>
+        </dependency>
+        <!-- Tomcat Server -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

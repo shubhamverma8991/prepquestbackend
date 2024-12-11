@@ -45,13 +45,14 @@ public class LanguageController {
     public ResponseEntity<?> addLang(@RequestBody Language lang) {
         try {
             languageService.saveLang(lang);
+            System.out.println("language "+lang);
             
             // Create a new Table for the language
             String tableName = lang.getLanguageName().toLowerCase();
             String createTable = "CREATE TABLE " + tableName + " (" +
             "id BIGINT PRIMARY KEY IDENTITY(1,1), " +
             "question TEXT, " +
-            "askedInCompany VARCHAR(255), " +
+            "askedincompany VARCHAR(255), " +
             "language_id BIGINT, " +
             "content TEXT, " +
             "FOREIGN KEY (language_id) REFERENCES language(id) ON DELETE CASCADE" +

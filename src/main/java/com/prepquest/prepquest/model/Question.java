@@ -11,8 +11,8 @@ public class Question {
     
     @Column(columnDefinition = "TEXT")
     private String question;
-    
-    private String askedInCompany;
+    @Column(name = "askedincompany")
+    private String askedincompany;
 
     @ManyToOne
     @JoinColumn(name = "language_id", nullable = false)
@@ -40,11 +40,11 @@ public class Question {
     }
 
     public String getAskedInCompany() {
-        return askedInCompany;
+        return askedincompany;
     }
 
     public void setAskedInCompany(String askedInCompany) {
-        this.askedInCompany = askedInCompany;
+        this.askedincompany = askedInCompany;
     }
 
     public Language getLanguage() {
