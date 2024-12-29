@@ -18,11 +18,11 @@ public class CodingQuestion {
     @JoinColumn(name = "language_id", nullable = false)
     private Language language;
 
-    @Lob
+    // @Lob
     @Column(columnDefinition = "TEXT")
     private String content;
 
-    @Lob
+    // @Lob
     @Column(name="imageexplaination")
     private String imageexplaination;
 
