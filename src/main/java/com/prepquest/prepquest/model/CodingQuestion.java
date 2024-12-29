@@ -3,9 +3,9 @@ package com.prepquest.prepquest.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "question")
-public class Question {
-
+@Table(name = "codingquestion")
+public class CodingQuestion {
+    
     @Id
     private Long id;
     
@@ -18,9 +18,14 @@ public class Question {
     @JoinColumn(name = "language_id", nullable = false)
     private Language language;
 
-    // @Lob
+    @Lob
     @Column(columnDefinition = "TEXT")
     private String content;
+
+    @Lob
+    @Column(name="imageexplaination")
+    private String imageexplaination;
+
 
     // Getters and Setters
     public Long getId() {
@@ -58,4 +63,13 @@ public class Question {
     public void setContent(String content) {
         this.content = content;
     }
+
+    public String getImageexplaination() {
+        return imageexplaination;
+    }
+
+    public void setImageexplaination(String imageexplaination) {
+        this.imageexplaination = imageexplaination;
+    }
+    
 }

@@ -73,6 +73,12 @@
             <artifactId>mssql-jdbc</artifactId>
             <version>10.2.0.jre8</version>
         </dependency>
+        <!-- Postgre -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
         <!-- Tomcat Server -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

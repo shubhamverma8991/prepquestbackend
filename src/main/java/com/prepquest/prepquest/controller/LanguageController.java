@@ -50,7 +50,7 @@ public class LanguageController {
             // Create a new Table for the language
             String tableName = lang.getLanguageName().toLowerCase();
             String createTable = "CREATE TABLE " + tableName + " (" +
-            "id BIGINT PRIMARY KEY IDENTITY(1,1), " +
+            "id BIGSERIAL PRIMARY KEY, " +
             "question TEXT, " +
             "askedincompany VARCHAR(255), " +
             "language_id BIGINT, " +
