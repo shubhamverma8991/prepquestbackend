@@ -2,13 +2,9 @@ package com.prepquest.prepquest.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import com.prepquest.prepquest.model.Question;
+import com.prepquest.prepquest.model.CodingQuestion;
 import com.prepquest.prepquest.service.CodingQuestionService;
 
 import java.util.List;
@@ -24,7 +20,7 @@ public class CodingQuestionController {
     @GetMapping("/{languageName}")
     public ResponseEntity<?> getQuestions(@PathVariable String languageName, @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
         try {
-            List<Question> questions = codingQuestionService.getCodingQuestionsByLanguage(languageName, page, size);
+            List<CodingQuestion> questions = codingQuestionService.getCodingQuestionsByLanguage(languageName, page, size);
             if (questions.isEmpty()) {
                 return ResponseEntity.ok(Map.of("message", "No Questions Present", "data", new Object[]{}));
             }

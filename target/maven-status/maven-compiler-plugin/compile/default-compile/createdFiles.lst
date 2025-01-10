@@ -1,4 +1,3 @@
-com\prepquest\prepquest\model\Question.class
 com\prepquest\prepquest\service\RoadMapService.class
 com\prepquest\prepquest\repository\LanguageRepository.class
 com\prepquest\prepquest\model\CodingQuestion.class
@@ -8,6 +7,7 @@ com\prepquest\prepquest\service\LanguageService.class
 com\prepquest\prepquest\controller\RoadMapController.class
 com\prepquest\prepquest\service\CodingQuestionService.class
 com\prepquest\prepquest\repository\RoadMapRepository.class
+com\prepquest\prepquest\model\TheoryQuestion.class
 com\prepquest\prepquest\model\Language.class
 com\prepquest\prepquest\controller\LanguageController.class
 com\prepquest\prepquest\model\RoadMap.class

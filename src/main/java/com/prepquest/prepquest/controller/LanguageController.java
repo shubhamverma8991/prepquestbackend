@@ -44,20 +44,20 @@ public class LanguageController {
             System.out.println("language "+lang);
             
             // Create a new Table for the language
-            String tableName = lang.getLanguageName().toLowerCase();
-            String createTable = "CREATE TABLE " + tableName + " (" +
-            "id BIGSERIAL PRIMARY KEY, " +
-            "question TEXT, " +
-            "askedincompany VARCHAR(255), " +
-            "language_id BIGINT, " +
-            "content TEXT, " +
-            "FOREIGN KEY (language_id) REFERENCES language(id) ON DELETE CASCADE" +
-            ");";
+            // String tableName = lang.getLanguageName().toLowerCase();
+            // String createTable = "CREATE TABLE " + tableName + " (" +
+            // "id BIGSERIAL PRIMARY KEY, " +
+            // "question TEXT, " +
+            // "askedincompany VARCHAR(255), " +
+            // "language_id BIGINT, " +
+            // "content TEXT, " +
+            // "FOREIGN KEY (language_id) REFERENCES language(id) ON DELETE CASCADE" +
+            // ");";
         
-            System.out.println("Executing SQL: " + createTable);
+            // System.out.println("Executing SQL: " + createTable);
 
             // Execute the SQL to create the table
-            entityManager.createNativeQuery(createTable).executeUpdate();
+            // entityManager.createNativeQuery(createTable).executeUpdate();
             
             return ResponseEntity.ok(Map.of("message", "Language Added"));
         } catch (Exception e) {

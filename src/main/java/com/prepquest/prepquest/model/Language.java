@@ -5,17 +5,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "language")
+@Table(name = "language", indexes = {
+    @Index(name = "idx_language_name", columnList = "name")
+})
 public class Language {
 
     @Id
     private Long id;
+
     @Column(unique = true, nullable = false)
-    @JsonProperty("languagename")
-    private String languagename;
+    @JsonProperty("name")
+    private String name;
+
     @Lob
-    @JsonProperty("languageicon")
-    private String languageicon;
+    @JsonProperty("icon")
+    private String icon;
 
     // Getters and Setters
     public Long getId() {
@@ -26,22 +30,23 @@ public class Language {
         this.id = id;
     }
 
-    public String getLanguageName() {
-        return languagename;
+    public String getName() {
+        return name;
     }
 
-    public void setLanguageName(String languagename) {
-        this.languagename = languagename;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getLanguageIcon() {
-        return languageicon;
+    public String getIcon() {
+        return icon;
     }
 
-    public void setLanguageIcon(String languageicon) {
-        this.languageicon = languageicon;
+    public void setIcon(String icon) {
+        this.icon = icon;
     }
 
-
-   
+ 
+    
+    
 }

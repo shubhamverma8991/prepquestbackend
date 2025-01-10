@@ -1,9 +1,14 @@
 package com.prepquest.prepquest.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "codingquestion")
+@Table(name = "codingquestion", indexes = {
+    @Index(name = "idx_codingquestion_language_id", columnList = "language_id"),
+    @Index(name = "idx_codingquestion_language_id_id", columnList = "language_id, id")
+})
 public class CodingQuestion {
     
     @Id
@@ -16,6 +21,7 @@ public class CodingQuestion {
 
     @ManyToOne
     @JoinColumn(name = "language_id", nullable = false)
+    @JsonIgnore  // Prevent serialization of this field
     private Language language;
 
     // @Lob
