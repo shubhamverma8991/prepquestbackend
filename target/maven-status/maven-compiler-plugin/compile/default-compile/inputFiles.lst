@@ -1,5 +1,6 @@
 G:\Freelance\PrepQuest\prepquestbackend\src\main\java\com\prepquest\prepquest\config\SecurityConfig.java
 G:\Freelance\PrepQuest\prepquestbackend\src\main\java\com\prepquest\prepquest\controller\CodingQuestionController.java
+G:\Freelance\PrepQuest\prepquestbackend\src\main\java\com\prepquest\prepquest\controller\HealthCheckController.java
 G:\Freelance\PrepQuest\prepquestbackend\src\main\java\com\prepquest\prepquest\controller\LanguageController.java
 G:\Freelance\PrepQuest\prepquestbackend\src\main\java\com\prepquest\prepquest\controller\QuestionController.java
 G:\Freelance\PrepQuest\prepquestbackend\src\main\java\com\prepquest\prepquest\controller\RoadMapController.java

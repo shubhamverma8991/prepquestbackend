@@ -13,4 +13,5 @@ com\prepquest\prepquest\controller\LanguageController.class
 com\prepquest\prepquest\model\RoadMap.class
 com\prepquest\prepquest\config\SecurityConfig.class
 com\prepquest\prepquest\controller\CodingQuestionController.class
+com\prepquest\prepquest\controller\HealthCheckController.class
 com\prepquest\prepquest\PrepquestApplication.class
