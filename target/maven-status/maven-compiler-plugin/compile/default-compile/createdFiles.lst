@@ -4,6 +4,7 @@ com\prepquest\prepquest\model\CodingQuestion.class
 com\prepquest\prepquest\service\QuestionService.class
 com\prepquest\prepquest\controller\QuestionController.class
 com\prepquest\prepquest\service\LanguageService.class
+com\prepquest\prepquest\model\Level.class
 com\prepquest\prepquest\controller\RoadMapController.class
 com\prepquest\prepquest\service\CodingQuestionService.class
 com\prepquest\prepquest\repository\RoadMapRepository.class

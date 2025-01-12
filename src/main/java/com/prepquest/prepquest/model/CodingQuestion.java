@@ -32,6 +32,9 @@ public class CodingQuestion {
     @Column(name="imageexplaination")
     private String imageexplaination;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "levels")
+    private Level level;
 
     // Getters and Setters
     public Long getId() {

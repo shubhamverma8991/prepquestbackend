@@ -28,6 +28,10 @@ public class TheoryQuestion {
     @Column(columnDefinition = "TEXT")
     private String content;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "levels")
+    private Level level;
+
     // Getters and Setters
     public Long getId() {
         return id;
@@ -63,5 +67,13 @@ public class TheoryQuestion {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public Level getLevel() {
+        return level;
+    }
+
+    public void setLevel(Level level) {
+        this.level = level;
     }
 }
